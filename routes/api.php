@@ -2,4 +2,6 @@
 use App\Http\Controllers\MemberController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('/members', [MemberController::class, 'store']);
+Route::post('/members', [MemberController::class, 'store']); 
+Route::get('/members', [MemberController::class, 'index']);
+

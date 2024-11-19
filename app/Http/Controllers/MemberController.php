@@ -32,4 +32,14 @@ class MemberController extends Controller
             'members' => $createdMembers,
         ], 201);
     }
+
+    public function index(): JsonResponse
+    {
+        $members = Member::all();
+
+        return response()->json([
+            'message' => 'All members retrieved successfully!',
+            'members' => $members,
+        ]);
+    }
 }
